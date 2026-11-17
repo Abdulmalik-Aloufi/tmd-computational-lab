@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Biaxial Strain in MoS₂ | TMD Lab</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']]
+        }
+    };
+</script>
+
+<script defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Biaxial Strain in Monolayer MoS₂</h1>
+    <p>Exercise 01: Strain Engineering</p>
+</header>
+
+<nav aria-label="Exercise navigation">
+    <a href="../../index.html">Home</a>
+    <a href="../../index.html#exercises">All Exercises</a>
+</nav>
+
+<main>
+<section>
+    <h2>1. Problem Statement</h2>
+    <p>
+        Consider a monolayer of molybdenum disulfide
+        (MoS₂) with an initial in-plane lattice
+        parameter of 3.18 Å.
+    </p>
+
+    <p>
+        Apply uniform biaxial strain from -2% to +4%.
+        Calculate the strained lattice parameter
+        and visualize its dependence on strain.
+    </p>
+
+    <h3>Learning Objectives</h3>
+
+    <ul>
+        <li>Understand biaxial strain in 2D crystals.</li>
+        <li>Derive the strained lattice parameter.</li>
+        <li>Implement the model using Python.</li>
+        <li>Interpret the numerical results.</li>
+    </ul>
+</section>
+<section>
+    <h2>2. Mathematical Model</h2>
+
+    <p>
+        The engineering strain is defined as
+    </p>
+
+    \[ 
+        \varepsilon = \frac{a-a_0}{a_0}
+    \]
+
+    <p>
+        Rearranging for the strained lattice
+        parameter gives
+    </p>
+
+    \[
+        a(\varepsilon) = a_0(1+\varepsilon)
+    \]
+
+    <p>
+        Here, \(a_0 = 3.18\,\text{Å}\) is the
+        unstrained lattice parameter.
+    </p>
+
+    <p>
+        For 2% tensile strain,
+        \(\varepsilon = 0.02\):
+    </p>
+
+    \[
+        a = 3.18(1+0.02)
+        = 3.2436\,\text{Å}
+    \]
+</section>
+
+<section id="results">
+    <h2>3. Numerical Results</h2>
+
+
+    <p>
+        The lattice parameter of monolayer MoS₂
+        was calculated for biaxial strain values
+        ranging from -2% to +4%.
+    </p>
+
+    <figure>
+        <img
+            src="../../figures/mos2_biaxial_strain.png"
+            alt="Lattice parameter vs biaxial strain for monolayer MoS₂"
+            width="800" 
+        >
+        
+        <figcaption>
+            Figure 1. Variation of the in-plane
+            lattice parameter with biaxial strain,
+            calculated using a geometric model.
+        </figcaption>
+    </figure>
+</section>
+
+<section id="Discussion">
+    <h2>4. Discussion</h2>
+
+    <p> 
+        The calculated lattice parameter increases linearly with 
+        increasing tensile biaxial strain.
+        conversely, it compressive strain decreases
+        the lattice parameter.
+    </p>
+
+    <p>
+        This behaviour follows directily from
+        the geometric relationship:
+    </p>
+
+    \[
+        a(\varepsilon) = a_0(1+\varepsilon)
+    \]
+
+    <p>
+        At 2% tensile strain, the lattice parameter
+        increases from 3.18 Å to 3.2436 Å. 
+        At -2% compresseive strain, it decreases 
+        to 3.1136 Å.
+    </p>
+
+    <h3>Limitations</h3>
+
+    <p>
+        This exercise uses a simplified geometric 
+        model and does not include atomic relaxiation,
+        electronic structure calculations, or
+        excitonic effects.
+    </p>
+
+
+    <h3>Future Work</h3>
+
+    <p>
+        Future inve=stigations could use density functional theory (DFT) 
+        to calculate relaxed atomic structures and investigate strain-dependante electronic properties. 
+    </p>
+</section>
+
+<section id="source-code">
+    <h2>5. Source Code</h2>
+
+    <p>
+        This exercise was implemented in Python
+        using NumPy and Matplotlib.
+    </p>
+
+    <p>
+        The source code calculates the strained 
+        lattice parameter and generates the 
+        corresponding scientific plot.
+    </p>
+
+    <a class="download-button"
+        href="strain.py"
+        download>
+        Download Python Script
+    </a>
+</section>
+</main>
+
+</body>
+</html>
